@@ -22,6 +22,14 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+        <v-list-item @click.stop="miniVariant = !miniVariant">
+          <v-list-item-action>
+            <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            {{ miniVariant ? '' : 'hide' }}
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -30,25 +38,7 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="appName" />
       <v-spacer />
       <v-btn
         icon
@@ -64,7 +54,7 @@
     </v-main>
     <v-navigation-drawer
       v-model="rightDrawer"
-      :right="right"
+      :right="true"
       temporary
       fixed
     >
@@ -75,12 +65,12 @@
               mdi-repeat
             </v-icon>
           </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+          <v-list-item-title>Live Stats</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-footer
-      :absolute="!fixed"
+      :absolute="!fixedFooter"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -92,25 +82,25 @@
 export default {
   data () {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
+      clipped: true,
+      drawer: true,
+      fixedFooter: true,
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Dashboard',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'publishers',
+          to: '/publishers'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      appName: 'Chana'
     }
   }
 }
