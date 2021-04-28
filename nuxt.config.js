@@ -3,11 +3,11 @@
 function getNodeApiBase (env) {
   switch (env) {
     case 'production':
-      return 'http://localhost:5000'
+      return 'http://localhost:5000/backend'
     case 'staging':
-      return 'http://localhost:4000'
+      return 'http://localhost:4000/backend'
     default:
-      return 'http://localhost:3000'
+      return 'http://localhost:3000/backend'
   }
 }
 

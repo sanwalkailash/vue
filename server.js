@@ -3,9 +3,10 @@ const { Nuxt, Builder } = require('nuxt')
 const bodyParser = require('body-parser')
 const app = require('express')()
 const cookieParser = require('cookie-parser')
-const winston = require('winston')
 const nuxtConfig = require('./nuxt.config.js')
 const serverConfig = require('./config.js')
+const routes = require('./backend/routes')
+const cors = require('cors')
 
 console.log('/***SERVER STARTING***/\n')
 console.log(`DATABASE: ${serverConfig.db.dbName}`)
@@ -25,13 +26,14 @@ console.log(`MAIN LOGO URL: ${nuxtConfig.env.mainLogoUrl}`)
 console.log(`STATIC BASE: ${nuxtConfig.env.staticBase}`)
 console.log(`ISDEV: ${nuxtConfig.dev}`)
 
-// winston.add(winston.transports.File, { filename: 'server.log' })
-// winston.log('info', 'Starting server')
-
-// Body parser, to access `req.body`
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors({ exposedHeaders: ['Content-Disposition'] }))
+app.options('*',cors())
+app.use(bodyParser.json({ limit: '50mb', extended: true }))
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 app.use(cookieParser())
+
+app.set('serverKey', nuxtConfig.env.secretKey)
+app.use('/', routes)
 
 const nuxt = new Nuxt(nuxtConfig)
 

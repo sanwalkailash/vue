@@ -9,10 +9,11 @@ const client = axios.create()
 client.interceptors.response.use(
   res => res,
   err => {
+    alert(err.response.data)
     throw err.response.data
   })
 
-const createAppStore = () => {
+const appStore = () => {
   return new Vuex.Store({
     state: {
       browserName: null,
@@ -67,6 +68,12 @@ const createAppStore = () => {
       },
       setAccountInfo (state, payload) {
         state.user = payload.user
+      },
+      setMainLogoUrl (state, payload) {
+        state.mainLogoUrl = payload.mainLogoUrl
+      },
+      setStaticBase (state, payload) {
+        state.staticBase = payload.staticBase
       }
     },
     actions: {
@@ -108,4 +115,4 @@ const createAppStore = () => {
   })
 }
 
-export default createAppStore
+export default appStore
