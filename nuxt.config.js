@@ -80,14 +80,15 @@ module.exports =  {
   dev: (process.env.NODE_ENV === 'dev') || (process.env.NODE_ENV === 'stage'), // added auto-build step for proxy.
   env: {
     nodeApiBase: getNodeApiBase(process.env.NODE_ENV),
-    reportApiBase: getReportBase(process.env.NODE_ENV),
+    reportingApiBase:getReportBase(process.env.NODE_ENV),
     uploadUrl: getFileUploadUrl(process.env.NODE_ENV),
     secretKey: getSecretKey(process.env.NODE_ENV),
     mainLogoUrl: (process.env.NODE_ENV === 'dev') ? '/favicon.ico' : '/static/v.png',
     staticBase: (process.env.NODE_ENV === 'dev') ? '/' : '/static/',
     idleTimeoutSeconds: 1800,
     idleLogoutSeconds: 90,
-    useMockData: true
+    useMockData: true,
+    baseURL: process.env.BASE_URL || './'
   },
   serverMiddleware: [
     '~/serverMiddleware/logger.js'

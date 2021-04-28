@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.11.3",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.9.1",
     "express": "^4.17.1",
+    "moment-timezone": "^0.5.33",
     "nuxt": "^2.15.3",
     "winston": "^3.3.3"
   },
