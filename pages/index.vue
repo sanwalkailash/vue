@@ -11,6 +11,7 @@
             </small>
           </footer>
         </blockquote>
+        <listing/>
       </div>
     </v-col>
   </v-row>
@@ -18,11 +19,13 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Listing from '../components/listing.vue'
 
 export default {
   middleware: ['isAuthenticated'],
   components: {
-    Logo
+    Logo,
+    Listing
   }
 }
 </script>
