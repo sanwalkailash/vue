@@ -27,7 +27,7 @@
             <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            {{ miniVariant ? '' : 'hide' }}
+            {{ miniVariant ? '' : 'minimize' }}
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -51,7 +51,9 @@
       <v-container>
         <nuxt />
       </v-container>
+      <Footer/>
     </v-main>
+    <BottomNavigation/>
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="true"
@@ -69,39 +71,44 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixedFooter"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
+import BottomNavigation from '../components/BottomNavigation'
+import Footer from '../components/Footer'
 export default {
   data () {
     return {
       clipped: true,
       drawer: true,
-      fixedFooter: true,
+      fixedFooter: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Dashboard',
+          icon: 'mdi-home',
+          title: 'home',
           to: '/'
         },
         {
+          icon: 'mdi-run',
+          title: 'explore',
+          to: '/farms'
+        },
+        {
           icon: 'mdi-chart-bubble',
-          title: 'publishers',
-          to: '/publishers'
+          title: 'events',
+          to: '/events'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      appName: 'Chana'
+      appName: this.$store.getters.getLanguage.hindi.appName
     }
+  },
+  components: {
+    BottomNavigation,
+    Footer
   }
 }
 </script>

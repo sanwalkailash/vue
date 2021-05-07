@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "node": "cross-env NODE_ENV=dev SECRET_KEY=kkkkk node server.js"
+    "server": "cross-env NODE_ENV=dev SECRET_KEY=kkkkk node server.js"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.11.3",
