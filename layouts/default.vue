@@ -9,7 +9,7 @@
     >
       <v-list>
         <v-list-item
-          v-for="(item, i) in items"
+          v-for="(item, i) in $store.getters.getInternationalization[$store.getters.getActiveLanguage].sideNav"
           :key="i"
           :to="item.to"
           router
@@ -38,7 +38,7 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="appName" />
+      <v-toolbar-title v-text="$store.getters.getInternationalization[$store.getters.getActiveLanguage].appName" />
       <v-spacer /> {{$store.getters.getActiveLanguage}}
       <v-btn
         icon
@@ -83,23 +83,6 @@ export default {
       clipped: true,
       drawer: true,
       fixedFooter: false,
-      items: [
-        {
-          icon: 'mdi-home',
-          title: 'home',
-          to: '/'
-        },
-        {
-          icon: 'mdi-run',
-          title: 'explore',
-          to: '/farms'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'events',
-          to: '/events'
-        }
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,

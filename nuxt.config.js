@@ -92,7 +92,45 @@ module.exports =  {
     internationalization:{
       hindi:{
         appName:'छाना',
+        sideNav:[
+          {
+            icon: 'mdi-home',
+            title: 'घर',
+            to: '/'
+          },
+          {
+            icon: 'mdi-run',
+            title: 'खोजें',
+            to: '/farms'
+          },
+          {
+            icon: 'mdi-chart-bubble',
+            title: 'कार्यक्रम',
+            to: '/events'
+          }
+        ],
         footer:'बच्चों को अनुभवी मेजबान द्वारा किसान परिवारों और उनके बच्चों के रोजमर्रा के जीवन में एकीकृत किया जाता है और गायों को दूध पिलाने, चिकन अंडे इकट्ठा करने या सूअरों को खिलाने में मदद करने की अनुमति दी जाती है। मूल्य में रात भर रहने की जगह, बहु-बेड वाले कमरे, साथ ही पूर्ण बोर्ड शामिल हैं। आपके बच्चे जल्द ही इन छुट्टियों को कभी नहीं भूलेंगे, और आने वाले लंबे समय तक उनके बारे में बात कर सकते हैं। जिन बच्चों को विशेष देखभाल की आवश्यकता होती है, उनके लिए संबंधित रूपरेखा शर्तों पर पहले से ही मेजबानों के साथ चर्चा की जानी चाहिए। यदि आप रुचि रखते हैं, तो कृपया कृषक परिवारों से सीधे संपर्क करें। आपको खेत की विशेष विशेषताओं और छोटे मेहमानों के लिए संभावनाओं के बारे में पहले से जानकारी प्राप्त होगी।'
+      },
+      english:{
+        appName:'Chana',
+        sideNav:[
+          {
+            icon: 'mdi-home',
+            title: 'home',
+            to: '/'
+          },
+          {
+            icon: 'mdi-run',
+            title: 'explore',
+            to: '/farms'
+          },
+          {
+            icon: 'mdi-chart-bubble',
+            title: 'events',
+            to: '/events'
+          }
+        ],
+        footer:'Children are integrated into the everyday lives of peasant families and their children by experienced hosts and allowed to help feed cows, collect chicken eggs, or feed pigs. Price includes overnight accommodation, multi-bedded rooms, as well as full boards. Your children will never forget these holidays soon, and may talk about them for a long time to come. For children who require special care, the related morphological conditions should be discussed with the hosts in advance. If you are interested, please contact farming families directly. You will get to know in advance about the special features of the farm and the possibilities for younger guests.'
       }
     },
     activeLanguage:'hindi',
