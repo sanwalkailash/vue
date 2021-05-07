@@ -39,7 +39,7 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="appName" />
-      <v-spacer />
+      <v-spacer /> {{$store.getters.getActiveLanguage}}
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -103,7 +103,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      appName: this.$store.getters.getLanguage.hindi.appName
+      appName: this.$store.getters.getInternationalization[this.$store.getters.getActiveLanguage].appName
     }
   },
   components: {

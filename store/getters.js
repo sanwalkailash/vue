@@ -17,7 +17,10 @@ export default {
   getUserEmail: (state) => {
     return state.userEmail
   },
-  getLanguage: (state) => {
-    return state.language
+  getInternationalization: (state) => {
+    return state.internationalization
+  },
+  getActiveLanguage: (state) => {
+    return state.activeLanguage
   }
 }

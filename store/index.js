@@ -19,7 +19,8 @@ const appStore = () => {
       user: null,
       loading: false,
       uploadUrl: null,
-      language: null
+      internationalization: null,
+      activeLanguage: null
     }),
     getters,
     mutations,

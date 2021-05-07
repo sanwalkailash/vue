@@ -26,13 +26,14 @@ export default {
     return resp.data
   },
   nuxtServerInit: ({ commit }, { env, req }) => {
-    const { mainLogoUrl, nodeApiBase, uploadUrl, staticBase, useMockData, language } = env
+    const { mainLogoUrl, nodeApiBase, uploadUrl, staticBase, useMockData, internationalization, activeLanguage } = env
     commit('setNodeApiBase', { nodeApiBase })
     commit('setUseMockData', { useMockData })
     commit('setFileUploadUrl', { uploadUrl })
     commit('setMainLogoUrl', { mainLogoUrl })
     commit('setStaticBase', { staticBase })
-    commit('setLanguage', { language })
+    commit('setInternationalization', { internationalization })
+    commit('setActiveLanguage', { activeLanguage })
     if (req.cookies && req.cookies.auth) {
       commit('setAuthorization', { token: req.cookies.auth })
     }

@@ -1,6 +1,9 @@
 export default {
-  setLanguage: (state, payload) => {
-    state.language = payload.language
+  setActiveLanguage: (state, payload) => {
+    state.activeLanguage = payload.activeLanguage
+  },
+  setInternationalization: (state, payload) => {
+    state.internationalization = payload.internationalization
   },
   setNodeApiBase: (state, payload) => {
     state.nodeApiBase = payload.nodeApiBase
