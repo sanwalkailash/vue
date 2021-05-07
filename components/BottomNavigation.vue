@@ -3,6 +3,7 @@
     :value="value"
     color="primary"
     grow
+    style="position: fixed;"
   >
     <v-btn>
       <span>Recents</span>
