@@ -2,7 +2,7 @@
   <v-footer
     dark
     padless
-    style="bottom:57px;"
+    style="margin-bottom:57px;margin-top: 78px;"
   >
     <v-card
       flat
