@@ -37,7 +37,7 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="miniVariant = !miniVariant" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$store.getters.getInternationalization[$store.getters.getActiveLanguage].appName" />
       <v-spacer />
       <v-menu offset-y>
@@ -105,7 +105,7 @@ export default {
       clipped: true,
       drawer: true,
       fixedFooter: false,
-      miniVariant: true,
+      miniVariant: false,
       right: true,
       rightDrawer: false,
       appName: this.$store.getters.getInternationalization[this.$store.getters.getActiveLanguage].appName
