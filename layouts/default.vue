@@ -22,7 +22,7 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click.stop="miniVariant = !miniVariant">
+        <v-list-item @click.stop="drawer = !drawer">
           <v-list-item-action>
             <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
           </v-list-item-action>
@@ -37,7 +37,7 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon class="d-sm-none d-lg-none" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="miniVariant = !miniVariant" />
       <v-toolbar-title v-text="$store.getters.getInternationalization[$store.getters.getActiveLanguage].appName" />
       <v-spacer />
       <v-menu offset-y>
