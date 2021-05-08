@@ -154,7 +154,7 @@ module.exports =  {
         footer:'Los niños son integrados en la vida cotidiana de las familias campesinas y sus hijos por anfitriones experimentados y se les permite ayudar a alimentar a las vacas, recolectar huevos de gallina o alimentar a los cerdos. El precio incluye alojamiento, habitaciones con varias camas y pensión completa. Sus hijos nunca olvidarán estas fiestas pronto y es posible que hablen de ellas durante mucho tiempo. Para los niños que requieren cuidados especiales, las condiciones morfológicas relacionadas deben discutirse con los anfitriones con anticipación. Si está interesado, comuníquese directamente con las familias de agricultores. Conocerá de antemano las características especiales de la finca y las posibilidades para los más pequeños.'
       }
     },
-    activeLanguage:'hindi',
+    activeLanguage:'english',
   },
   serverMiddleware: [
     '~/serverMiddleware/logger.js'
