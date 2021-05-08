@@ -22,7 +22,7 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click.stop="drawer = !drawer">
+        <v-list-item @click.stop="miniVariant = !miniVariant">
           <v-list-item-action>
             <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
           </v-list-item-action>
