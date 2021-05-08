@@ -68,6 +68,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
+      <Highlights/>
       <v-container>
         <nuxt />
       </v-container>
@@ -97,6 +98,7 @@
 <script>
 import BottomNavigation from '../components/BottomNavigation'
 import Footer from '../components/Footer'
+import Highlights from '../components/Highlights'
 export default {
   data () {
     return {
@@ -111,7 +113,8 @@ export default {
   },
   components: {
     BottomNavigation,
-    Footer
+    Footer,
+    Highlights
   },
   computed: {
   }
