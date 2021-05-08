@@ -14,7 +14,6 @@
                     :headers="headers"
                     :items="items"
                     show-expand
-                    expand
                     item-key="name"
                     :search="search"
                     @item-expanded="loadDetails">

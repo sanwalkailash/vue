@@ -133,7 +133,7 @@ module.exports =  {
         footer:'Children are integrated into the everyday lives of peasant families and their children by experienced hosts and allowed to help feed cows, collect chicken eggs, or feed pigs. Price includes overnight accommodation, multi-bedded rooms, as well as full boards. Your children will never forget these holidays soon, and may talk about them for a long time to come. For children who require special care, the related morphological conditions should be discussed with the hosts in advance. If you are interested, please contact farming families directly. You will get to know in advance about the special features of the farm and the possibilities for younger guests.'
       },
       spanish:{
-        appName:'Chana',
+        appName:'Querer',
         sideNav:[
           {
             icon: 'mdi-home',
