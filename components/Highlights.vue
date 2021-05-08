@@ -1,5 +1,5 @@
 <template>
-  <v-container style="overflow:auto;max-height:200px;">
+  <v-container style="overflow:auto;max-height:180px;">
       <v-row >
         <v-col
           v-for="card in cards"
