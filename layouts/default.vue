@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
+    <v-navigation-drawer style="height: 79vh;"
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -37,9 +37,29 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon class="d-sm-none d-lg-none" @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$store.getters.getInternationalization[$store.getters.getActiveLanguage].appName" />
-      <v-spacer /> {{$store.getters.getActiveLanguage}}
+      <v-spacer />
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            color="primary"
+            dark
+            v-bind="attrs"
+            v-on="on"
+          >
+            {{$store.getters.getActiveLanguage}}
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(content, _key) in $store.getters.getInternationalization"
+            :key="_key"
+          >
+            <v-list-item-title @click="$store.dispatch('setActiveLanguage',_key)">{{ _key }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -83,7 +103,7 @@ export default {
       clipped: true,
       drawer: true,
       fixedFooter: false,
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       appName: this.$store.getters.getInternationalization[this.$store.getters.getActiveLanguage].appName
@@ -92,6 +112,8 @@ export default {
   components: {
     BottomNavigation,
     Footer
+  },
+  computed: {
   }
 }
 </script>

@@ -2,6 +2,9 @@ import constants from '../common/constants'
 import apiMock from '../common/mock'
 import client from '../http'
 export default {
+  setActiveLanguage: ({ commit, state }, activeLanguage) => {
+    commit('setActiveLanguage', { activeLanguage: activeLanguage })
+  },
   clearLocalStorage: () => {
     window.localStorage.clear()
   },

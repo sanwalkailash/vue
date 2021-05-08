@@ -131,6 +131,27 @@ module.exports =  {
           }
         ],
         footer:'Children are integrated into the everyday lives of peasant families and their children by experienced hosts and allowed to help feed cows, collect chicken eggs, or feed pigs. Price includes overnight accommodation, multi-bedded rooms, as well as full boards. Your children will never forget these holidays soon, and may talk about them for a long time to come. For children who require special care, the related morphological conditions should be discussed with the hosts in advance. If you are interested, please contact farming families directly. You will get to know in advance about the special features of the farm and the possibilities for younger guests.'
+      },
+      spanish:{
+        appName:'Chana',
+        sideNav:[
+          {
+            icon: 'mdi-home',
+            title: 'casa',
+            to: '/'
+          },
+          {
+            icon: 'mdi-run',
+            title: 'explorar',
+            to: '/farms'
+          },
+          {
+            icon: 'mdi-chart-bubble',
+            title: 'eventos',
+            to: '/events'
+          }
+        ],
+        footer:'Los niños son integrados en la vida cotidiana de las familias campesinas y sus hijos por anfitriones experimentados y se les permite ayudar a alimentar a las vacas, recolectar huevos de gallina o alimentar a los cerdos. El precio incluye alojamiento, habitaciones con varias camas y pensión completa. Sus hijos nunca olvidarán estas fiestas pronto y es posible que hablen de ellas durante mucho tiempo. Para los niños que requieren cuidados especiales, las condiciones morfológicas relacionadas deben discutirse con los anfitriones con anticipación. Si está interesado, comuníquese directamente con las familias de agricultores. Conocerá de antemano las características especiales de la finca y las posibilidades para los más pequeños.'
       }
     },
     activeLanguage:'hindi',
