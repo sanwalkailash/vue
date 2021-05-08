@@ -5,8 +5,9 @@
           v-for="card in cards"
           :key="card.title"
           :cols="card.flex"
+
         >
-          <v-card max-height="150" max-width="250">
+          <v-card max-height="150" max-width="250" >
             <v-img
               :src="card.src"
               class="white--text align-end"
@@ -22,10 +23,6 @@
 
               <v-btn icon>
                 <v-icon>mdi-heart</v-icon>
-              </v-btn>
-
-              <v-btn icon>
-                <v-icon>mdi-bookmark</v-icon>
               </v-btn>
 
               <v-btn icon>

@@ -3,6 +3,8 @@
         <v-flex xs12 sm12>
             <v-card>
                 <v-card-title>
+                   Filter Options
+                    <v-spacer></v-spacer>
                     <v-text-field
                     v-model="search"
                     label="Search"
@@ -16,6 +18,7 @@
                     show-expand
                     item-key="name"
                     :search="search"
+                    loading-text="Loading... Please wait"
                     @item-expanded="loadDetails">
                     <template v-slot:expanded-item="{ headers, item }">
                         <td :colspan="headers.length" ripple>
