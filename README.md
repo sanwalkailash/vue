@@ -2,6 +2,8 @@
 
 ## Build Setup
 
+npm run server
+
 ```bash
 # install dependencies
 $ npm install
