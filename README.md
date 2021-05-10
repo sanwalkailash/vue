@@ -2,6 +2,7 @@
 
 ## Build Setup
 
+
 ```bash
 # install dependencies
 $ npm install
@@ -10,8 +11,7 @@ $ npm install
 $ npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ npm run server
 
 # generate static project
 $ npm run generate
