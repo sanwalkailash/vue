@@ -109,7 +109,7 @@ module.exports =  {
             to: '/events'
           }
         ],
-        footer:'बच्चों को अनुभवी मेजबान द्वारा किसान परिवारों और उनके बच्चों के रोजमर्रा के जीवन में एकीकृत किया जाता है और गायों को दूध पिलाने, चिकन अंडे इकट्ठा करने या सूअरों को खिलाने में मदद करने की अनुमति दी जाती है। मूल्य में रात भर रहने की जगह, बहु-बेड वाले कमरे, साथ ही पूर्ण बोर्ड शामिल हैं। आपके बच्चे जल्द ही इन छुट्टियों को कभी नहीं भूलेंगे, और आने वाले लंबे समय तक उनके बारे में बात कर सकते हैं। जिन बच्चों को विशेष देखभाल की आवश्यकता होती है, उनके लिए संबंधित रूपरेखा शर्तों पर पहले से ही मेजबानों के साथ चर्चा की जानी चाहिए। यदि आप रुचि रखते हैं, तो कृपया कृषक परिवारों से सीधे संपर्क करें। आपको खेत की विशेष विशेषताओं और छोटे मेहमानों के लिए संभावनाओं के बारे में पहले से जानकारी प्राप्त होगी।'
+        footer:'सब ठीक हैं !'
       },
       english:{
         appName:'Chana',
@@ -130,7 +130,7 @@ module.exports =  {
             to: '/events'
           }
         ],
-        footer:'Children are integrated into the everyday lives of peasant families and their children by experienced hosts and allowed to help feed cows, collect chicken eggs, or feed pigs. Price includes overnight accommodation, multi-bedded rooms, as well as full boards. Your children will never forget these holidays soon, and may talk about them for a long time to come. For children who require special care, the related morphological conditions should be discussed with the hosts in advance. If you are interested, please contact farming families directly. You will get to know in advance about the special features of the farm and the possibilities for younger guests.'
+        footer:'All is well !'
       },
       spanish:{
         appName:'Querer',
@@ -151,7 +151,7 @@ module.exports =  {
             to: '/events'
           }
         ],
-        footer:'Los niños son integrados en la vida cotidiana de las familias campesinas y sus hijos por anfitriones experimentados y se les permite ayudar a alimentar a las vacas, recolectar huevos de gallina o alimentar a los cerdos. El precio incluye alojamiento, habitaciones con varias camas y pensión completa. Sus hijos nunca olvidarán estas fiestas pronto y es posible que hablen de ellas durante mucho tiempo. Para los niños que requieren cuidados especiales, las condiciones morfológicas relacionadas deben discutirse con los anfitriones con anticipación. Si está interesado, comuníquese directamente con las familias de agricultores. Conocerá de antemano las características especiales de la finca y las posibilidades para los más pequeños.'
+        footer:'Todo está bien !'
       }
     },
     activeLanguage:'english',

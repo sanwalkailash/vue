@@ -68,13 +68,11 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <Highlights/>
       <v-container>
         <nuxt />
       </v-container>
       <Footer/>
     </v-main>
-    <BottomNavigation/>
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="true"
@@ -96,9 +94,7 @@
 </template>
 
 <script>
-import BottomNavigation from '../components/BottomNavigation'
 import Footer from '../components/Footer'
-import Highlights from '../components/Highlights'
 export default {
   data () {
     return {
@@ -112,9 +108,7 @@ export default {
     }
   },
   components: {
-    BottomNavigation,
-    Footer,
-    Highlights
+    Footer
   },
   computed: {
   }
